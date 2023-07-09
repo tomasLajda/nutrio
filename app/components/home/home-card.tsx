@@ -12,7 +12,7 @@ const HomeCard: React.FC<{
           </div>
         ))}
       </div>
-      <h2>{title}</h2>
+      <h2 className="mb-2">{title}</h2>
       <p>{description}</p>
     </div>
   );

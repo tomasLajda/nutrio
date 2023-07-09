@@ -32,6 +32,14 @@ export const lists: List[] = [
       { label: 'Support', path: '/' },
     ],
   },
+  {
+    title: 'The Product',
+    links: [
+      { label: 'Individuals', path: '/' },
+      { label: 'Privacy', path: '/' },
+      { label: 'Terms', path: '/' },
+    ],
+  },
 ];
 
 function HomeFooter() {
@@ -40,19 +48,21 @@ function HomeFooter() {
   const year = date.getFullYear();
 
   return (
-    <footer className=" bg-gray-950 text-gray-50 py-8">
-      <section className="grid gap-4 mx-8">
-        <div className="relative right-4">
-          <Logo />
-        </div>
-        {lists.map((list, i) => (
-          <HomeFooterList key={i} props={list} />
-        ))}
-
-        <div className="flex justify-between border-t-2 pt-5">
-          {icons.map((icon, i) => (
-            <SocialIcon key={i} {...icon} />
+    <footer className="flex justify-center bg-gray-950 text-gray-50 py-8">
+      <section className="max-w-screen-lg w-11/12 grid gap-4 mx-8">
+        <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
+          <div className="relative right-4 md:right-0">
+            <Logo />
+          </div>
+          {lists.map((list, i) => (
+            <HomeFooterList key={i} props={list} />
           ))}
+
+          <div className="flex justify-between max-w-xs border-t-2 pt-5">
+            {icons.map((icon, i) => (
+              <SocialIcon key={i} {...icon} />
+            ))}
+          </div>
         </div>
         <div>
           <p>Copyright © {year} </p>

@@ -15,7 +15,7 @@ import { Label } from '../components/ui/label';
 const Login = () => {
   return (
     <div className="flex justify-center items-center mb-5">
-      <section className="grid gap-4 max-w-md bg-slate-100 px-2 py-6 rounded-md">
+      <section className="grid gap-4 max-w-screen-lg w-11/12 bg-slate-100 px-2 py-6 rounded-md">
         <h1 className="text-center">Welcome Back</h1>
         <form method="POST" className="grid gap-3 justify-items-center mx-10">
           <div>
