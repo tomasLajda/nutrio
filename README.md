@@ -1,4 +1,5 @@
 Welcome to my nutrition app repository made with my stack.
+
 Technology used on this project: Remix, Tailwind, Shadcn, Prisma, Lucine...
 
 # Welcome to Remix!
