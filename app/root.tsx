@@ -1,6 +1,5 @@
 import { type LinksFunction } from '@remix-run/node';
 import {
-  Link,
   Links,
   LiveReload,
   Meta,
@@ -9,9 +8,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import Logo from '../public/img/apple-icon.png';
-import { Button } from './components/ui/button';
-
+import NavBar from './components/nav-bar/nav-bar';
 import styles from './tailwind.css';
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
@@ -25,22 +22,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <nav className="flex justify-between items-center max-w-screen-lg py-5">
-          <div className="flex items-center flex-grow">
-            <img src={Logo} alt="" />
-            <h1 className=" border-b text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-              Nutrio
-            </h1>
-          </div>
-          <div>
-            <Button className="mr-2">
-              <Link to="/register">Register</Link>
-            </Button>
-            <Button className="mr-2">
-              <Link to="/login">Login</Link>
-            </Button>
-          </div>
-        </nav>
+        <NavBar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
