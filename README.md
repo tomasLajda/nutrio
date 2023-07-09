@@ -1,8 +1,5 @@
-> **Warning**  
-> The `@remix-run/vercel` runtime adapter has been deprecated in favor of out of
-> the box Vercel functionality and will be removed in Remix v2.  
-> This means you don't have to use the Vercel template & can just use the Remix
-> template instead.
+Welcome to my nutrition app repository made with my stack.
+Technology used on this project: Remix, Tailwind, Shadcn, Prisma, Lucine...
 
 # Welcome to Remix!
 
