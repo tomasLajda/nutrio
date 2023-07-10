@@ -10,7 +10,10 @@ import {
 
 import NavBar from './components/nav-bar/nav-bar';
 import styles from './tailwind.css';
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: styles },
+  { rel: 'icon', href: '/img/icon.svg', type: 'image/svg' },
+];
 
 export default function App() {
   return (
