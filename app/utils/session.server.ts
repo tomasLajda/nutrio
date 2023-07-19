@@ -6,17 +6,33 @@ type User = {
   username: string;
   email: string;
   password: string;
+  sex: string;
+  height: number;
+  weight: number;
+  birthday: Date;
 };
 
 const saltRounds = 10;
 
-export const register = async ({ username, email, password }: User) => {
+export const register = async ({
+  username,
+  email,
+  password,
+  sex,
+  height,
+  weight,
+  birthday,
+}: User) => {
   const hash = await bcrypt.hash(password, saltRounds);
   return db.user.create({
     data: {
       username,
       email,
       password: hash,
+      sex,
+      height,
+      weight,
+      birthday,
     },
   });
 };

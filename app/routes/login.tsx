@@ -1,3 +1,4 @@
+import { type ActionArgs } from '@remix-run/node';
 import { Link } from '@remix-run/react';
 import { Button } from '../components/ui/button';
 import {
@@ -11,6 +12,11 @@ import {
 } from '../components/ui/dialog';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
+import { signInRedirect } from '../utils/sign-in-redirect';
+
+export const loader = async (data: ActionArgs) => {
+  return await signInRedirect(data);
+};
 
 const Login = () => {
   return (

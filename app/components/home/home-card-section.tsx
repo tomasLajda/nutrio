@@ -36,14 +36,14 @@ const cardSections = [
 const HomeCardSection = () => {
   return (
     <div className="text-center">
-      <div className="flex flex-col items-center mb-8">
+      <div className="flex flex-col items-center mb-16">
         <h1>Develop Healthy Habits</h1>
         <p className="max-w-xs ">
           Count your calories, ensure you're meeting nutrient targets, and see
           your progress over time.
         </p>
       </div>
-      <div className="grid gap-4 justify-items-center md:grid-cols-2">
+      <div className="grid gap-24 justify-items-center md:grid-cols-2">
         {cardSections.map((cardSection, i) => (
           <HomeCard key={i} {...cardSection} />
         ))}
